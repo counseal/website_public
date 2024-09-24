@@ -837,6 +837,10 @@ body {
   margin-top: 6px;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .block{
   display: block;
 }
@@ -883,6 +887,10 @@ body {
 
 .h-full{
   height: 100%;
+}
+
+.h-px{
+  height: 1px;
 }
 
 .w-10{
@@ -990,6 +998,14 @@ body {
   resize: both;
 }
 
+.list-inside{
+  list-style-position: inside;
+}
+
+.list-disc{
+  list-style-type: disc;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1018,12 +1034,36 @@ body {
   gap: 14px;
 }
 
+.gap-\[10px\]{
+  gap: 10px;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.self-center{
+  align-self: center;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
 
 .scroll-smooth{
   scroll-behavior: smooth;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
 }
 
 .rounded-\[14px\]{
@@ -1132,8 +1172,32 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-dark{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 25 40 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-20{
   --tw-bg-opacity: 0.2;
+}
+
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-stroke\/0{
+  --tw-gradient-from: rgb(223 228 234 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(223 228 234 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-stroke{
+  --tw-gradient-to: rgb(223 228 234 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #DFE4EA var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-stroke\/0{
+  --tw-gradient-to: rgb(223 228 234 / 0) var(--tw-gradient-to-position);
 }
 
 .fill-current{
@@ -1148,6 +1212,10 @@ body {
 .object-center{
   -o-object-position: center;
      object-position: center;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-10{
@@ -1259,6 +1327,18 @@ body {
   padding-top: 120px;
 }
 
+.pb-\[60px\]{
+  padding-bottom: 60px;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1367,6 +1447,21 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-gray-900{
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1388,6 +1483,12 @@ body {
 .shadow-testimonial{
   --tw-shadow: 0px 10px 20px 0px rgba(92, 115, 160, 0.07);
   --tw-shadow-colored: 0px 10px 20px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1448,23 +1549,23 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.sticky #navbarCollapse li > a{
+.sticky #navbarCollapse li > a, .sticky #logo-text{
   --tw-text-opacity: 1;
   color: rgb(17 25 40 / var(--tw-text-opacity));
 }
 
-.sticky #navbarCollapse li > a:hover{
+.sticky #navbarCollapse li > a:hover, .sticky #logo-text:hover{
   --tw-text-opacity: 1;
   color: rgb(55 88 249 / var(--tw-text-opacity));
   opacity: 1;
 }
 
-.sticky #navbarCollapse li > a:is(.dark *){
+.sticky #navbarCollapse li > a:is(.dark *), .sticky #logo-text:is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.sticky #navbarCollapse li > a:hover:is(.dark *){
+.sticky #navbarCollapse li > a:hover:is(.dark *), .sticky #logo-text:hover:is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(55 88 249 / var(--tw-text-opacity));
 }
@@ -1691,6 +1792,16 @@ body {
   background-color: #090e34b3;
 }
 
+.dark\:bg-white:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.dark\:via-dark-3:is(.dark *){
+  --tw-gradient-to: rgb(55 65 81 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #374151 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .dark\:text-dark-6:is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1774,6 +1885,15 @@ body {
     line-height: 1.75rem;
   }
 
+  .sm\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .sm\:text-\[28px\]{
+    font-size: 28px;
+  }
+
   .sm\:leading-\[1\.2\]{
     line-height: 1.2;
   }
@@ -1784,6 +1904,15 @@ body {
 
   .sm\:leading-snug{
     line-height: 1.375;
+  }
+
+  .sm\:leading-\[40px\]{
+    line-height: 40px;
+  }
+
+  .sm\:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
@@ -1837,12 +1966,20 @@ body {
     font-size: 40px;
   }
 
+  .md\:text-\[35px\]{
+    font-size: 35px;
+  }
+
   .md\:leading-\[1\.2\]{
     line-height: 1.2;
   }
 
   .md\:leading-\[1\.42\]{
     line-height: 1.42;
+  }
+
+  .md\:leading-\[1\.28\]{
+    line-height: 1.28;
   }
 }
 
@@ -2029,6 +2166,14 @@ body {
     padding-top: 160px;
   }
 
+  .lg\:pb-20{
+    padding-bottom: 5rem;
+  }
+
+  .lg\:pt-20{
+    padding-top: 5rem;
+  }
+
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2041,6 +2186,11 @@ body {
   .lg\:text-white{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:text-body-color{
+    --tw-text-opacity: 1;
+    color: rgb(99 115 129 / var(--tw-text-opacity));
   }
 
   .lg\:shadow-none{
@@ -2060,6 +2210,11 @@ body {
 
   .dark\:lg\:bg-transparent:is(.dark *){
     background-color: transparent;
+  }
+
+  .dark\:lg\:text-dark-6:is(.dark *){
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
 
