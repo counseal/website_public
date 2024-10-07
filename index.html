@@ -1882,12 +1882,12 @@
               <h2
                 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]"
               >
-                <span class="text-xl font-medium">$</span>
+                <span class="text-xl font-medium" data-currency-symbol>$</span>
                 <span class="-ml-1 -tracking-[2px]">0.00</span>
                 <span
                   class="text-base font-normal text-body-color dark:text-dark-6"
                 >
-                  AUD per month
+                  <span data-currency-code>USD</span> per month
                 </span>
               </h2>
               <div class="mb-[50px]">
@@ -1934,12 +1934,12 @@
               <h2
                 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]"
               >
-                <span class="text-xl font-medium">$</span>
-                <span class="-ml-1 -tracking-[2px]">70.00</span>
+                <span class="text-xl font-medium" data-currency-symbol>$</span>
+                <span class="-ml-1 -tracking-[2px]" id="standardPrice">60.00</span>
                 <span
                   class="text-base font-normal text-body-color dark:text-dark-6"
                 >
-                  AUD per month
+                  <span data-currency-code>USD</span> per month
                 </span>
               </h2>
               <div class="mb-[50px]">
@@ -2652,6 +2652,46 @@
         submitButton.classList.remove('opacity-70');
         submitButton.textContent = 'Send';
       });
+
+      (async () => {
+        try {
+          const res = await fetch('https://ipinfo.io/json?token=936edc1c80a3a5');
+
+          if (res.ok) {
+            const text = await res.text();
+            const json = text ? JSON.parse(text) : null;
+            let countryTimezone;
+
+            if (json) {
+              countryTimezone = json.timezone.split('/')[0];
+            }
+
+            let currency = 'USD';
+            let standardPrice = '60.00';
+            let currencySymbol = '$';
+
+            if (countryTimezone === 'Australia') {
+              currency = 'AUD';
+              standardPrice = '70.00';
+              currencySymbol = 'A$';
+            } else if (countryTimezone === 'Europe') {
+              currency = 'EUR';
+              standardPrice = '50.00';
+              currencySymbol = '€';
+            } else if (countryTimezone === 'America') {
+              currency = 'USD';
+              standardPrice = '60.00';
+              currencySymbol = '$'
+            }
+
+            document.getElementById('standardPrice').textContent = standardPrice;
+            document.querySelectorAll('[data-currency-symbol]').forEach((el) => el.textContent = currencySymbol);
+            document.querySelectorAll('[data-currency-code]').forEach((el) => el.textContent = currency);
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      })();
     </script>
   </body>
 </html>
