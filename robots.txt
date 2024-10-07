@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://counseal.io/sitemap.xml
