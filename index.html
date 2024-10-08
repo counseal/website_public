@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js"></script>
-    <script>
-        glowCookies.start('en', {
-            style: 1,
-            analytics: 'G-EE0WD3GZH9',
-            policyLink: 'https://counseal.io/terms'
-        });
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE0WD3GZH9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EE0WD3GZH9');
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="description" content="Modern secure share registry for private companies">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,7 +60,7 @@
       <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
           <div class="w-60 max-w-full px-4">
-            <a href="index.html" class="navbar-logo block w-full py-5 flex">
+            <a href="/" class="navbar-logo block w-full py-5 flex">
               <img
                 src="assets/images/logo/logo-white.svg"
                 alt="logo"
@@ -2246,10 +2227,26 @@
               <ul>
                 <li>
                   <a
-                    href="terms.html"
+                    href="/terms"
                     class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/privacy-policy"
+                    class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/cookie-policy"
+                    class="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                  >
+                    Cookie Policy
                   </a>
                 </li>
               </ul>
@@ -2701,6 +2698,15 @@
           console.error(err);
         }
       })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js"></script>
+    <script>
+        glowCookies.start('en', {
+            style: 1,
+            analytics: 'G-EE0WD3GZH9',
+            policyLink: 'https://counseal.io/cookie-policy'
+        });
     </script>
   </body>
 </html>

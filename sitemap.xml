@@ -10,7 +10,32 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
+  <loc>http://counseal.io/terms</loc>
+  <priority>1</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
   <loc>http://counseal.io/terms.html</loc>
+  <priority>1</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://counseal.io/privacy-policy</loc>
+  <priority>1</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://counseal.io/privacy-policy.html</loc>
+  <priority>1</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://counseal.io/cookie-policy</loc>
+  <priority>1</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://counseal.io/cookie-policy.html</loc>
   <priority>1</priority>
   <changefreq>daily</changefreq>
 </url>
